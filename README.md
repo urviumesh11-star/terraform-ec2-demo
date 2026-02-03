@@ -24,6 +24,18 @@ This project demonstrates how to provision an **AWS EC2 instance** manually and 
 - **Skills Gained:** AWS EC2, Terraform, GitHub version control, DevOps workflow simulation.
 
 ---
+## AWS Networking Details
+
+While provisioning EC2 instances, the following AWS networking components were considered:
+
+- **VPC (Virtual Private Cloud):** Default VPC is used to host EC2 instances.  
+- **Subnet:** Instances are launched in a public subnet to allow SSH access.  
+- **Security Group:** A security group was configured to allow:
+  - SSH (port 22) from my IP  
+  - HTTP/HTTPS (if required by application)  
+- **Key Pair:** Used to securely connect (SSH) to EC2 instance.  
+
+Note: For simplicity, Terraform used AWS default VPC and subnet. In a real company scenario, you would create a separate VPC, custom subnets, and stricter security rules.
 
 ## Folder Structure
 terraform-ec2-demo/
